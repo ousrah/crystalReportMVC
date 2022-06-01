@@ -1,0 +1,73 @@
+﻿@model WebApplication17.OUVRAGE
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OUVRAGE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CATEGORIE.LIBCAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIE.LIBCAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASSIFICATION.LIBRUB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASSIFICATION.LIBRUB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDITEUR.ADRED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDITEUR.ADRED)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THEME.LIBTHEME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THEME.LIBTHEME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMOUVR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMOUVR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANNEEPARU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANNEEPARU)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
